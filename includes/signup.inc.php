@@ -1,10 +1,12 @@
 <?php
+include('autoloader.php');
 
 /*
 {''''''''''''}
 {  Erc Ernst }
 {____________}
 */
+
 
 if(isset($_POST['submit'])){
   $uid = $_POST['uid'];
@@ -13,9 +15,9 @@ if(isset($_POST['submit'])){
   $pwd_repeat = $_POST['pwd_repeat'];
 
   #instantiate signup-contr class
-  include('../classes/dbh.classes.php');
-  include('../classes/signup.classes.php');
-  include('../classes/signup-contr.classes.php');
+  // include('../classes/dbh.classes.php');
+  // include('../classes/signup.classes.php');
+  // include('../classes/signup-contr.classes.php');
   
   $signup = new SignupContr($uid,$email,$password,$pwd_repeat);
 
