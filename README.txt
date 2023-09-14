@@ -39,21 +39,25 @@ To run this registration system locally, you'll need:
 
    ```bash
    git clone https://github.com/officialeric/oop-reg.git
+   \```
 
 2. Change to the project directory:
 
    ```bash
   cd registration-system-php
+  \```
 
 3. Install PHP dependencies using Composer:
 
    ```bash
    composer install
+   \```
 
 4. Configure your database settings by copying the config/config.example.php file to config/config.php and updating the values:
 
    ```bash
    cp config/config.example.php config/config.php
+   \```
 
 5. Import the database schema located in the database directory into your MySQL database.
 
