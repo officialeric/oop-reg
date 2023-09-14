@@ -14,11 +14,7 @@ if(isset($_POST['submit'])){
   $password = $_POST['password'];
   $pwd_repeat = $_POST['pwd_repeat'];
 
-  #instantiate signup-contr class
-  // include('../classes/dbh.classes.php');
-  // include('../classes/signup.classes.php');
-  // include('../classes/signup-contr.classes.php');
-  
+  #instantiate signup-contr class  
   $signup = new SignupContr($uid,$email,$password,$pwd_repeat);
 
   #running error handlers
