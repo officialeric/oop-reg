@@ -49,7 +49,6 @@ class SignupContr extends Signup{
     }
 
     public function emptyInput(){
-        $result;
         if(empty($this->uid) || empty($this->email) || empty($this->password) || empty($this->pwd_repeat)){
            $result = false; 
         }else{
@@ -59,7 +58,6 @@ class SignupContr extends Signup{
         return $result;
     }
     public function validateUid(){
-        $result;
         if(!preg_match("/^[a-zA-Z0-9]*$/",$this->uid)){
            $result = false; 
         }else{
@@ -70,7 +68,6 @@ class SignupContr extends Signup{
     }
 
     public function validateEmail(){
-        $result;
         if(!filter_var($this->email,FILTER_VALIDATE_EMAIL)){
            $result = false; 
         }else{
@@ -80,7 +77,6 @@ class SignupContr extends Signup{
         return $result;
     }
     public function pwdMatch(){
-        $result;
         if($this->password !== $this->pwd_repeat){
            $result = false; 
         }else{
@@ -90,7 +86,6 @@ class SignupContr extends Signup{
         return $result;
     }
     public function userHasTaken(){
-        $result;
         if(!Parent::checkUser($this->uid,$this->email)){
            $result = false; 
         }else{

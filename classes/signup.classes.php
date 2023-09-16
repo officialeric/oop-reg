@@ -32,7 +32,7 @@ class Signup extends Dbh{
           exit();
         }
 
-        $result;
+
         if($sql->rowCount() > 0){
             $result = true;
         }else{

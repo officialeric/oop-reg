@@ -12,7 +12,10 @@ if (!function_exists('myAutoloader')) {
 
         if (strpos($url, 'includes')) {
             $path = '../classes/';
-        } else {
+        } else if(strpos($url, 'classes')) {
+            $path = './';
+        }
+        else {
             $path = 'classes/';
         }
         $ext = '.classes.php';
